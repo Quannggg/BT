@@ -1,0 +1,186 @@
+A
+1.1
+trả về 0 nếu false và 1 nếu true
+1.2
+in ra 0 vì 3,5 là int
+1.3
+Tích của hai giá trị int được tính là một giá trị int, sau đó mới được đổi thành một giá trị long. Tuy nhiên 65536 * 65536 = 2^32 là giá trị vượt ra ngoài khả năng lưu trữ của số int 32 bit trước khi nó được đổi ra long.
+1.4
+ra 0 vì sqrt(2)=1
+1.5
+run time error
+1.6
+máy báo lỗi invalid
+biến dạng global, kết quả là 0
+1.7
+0
+0.75
+0.75
+0.75
+1.8
+conflicting declaration 'char arg1'
+1.9
+A
+1.10
+-1
+1.11
+5,9 là int nên 5/9 = 0
+1.12
+Here
+
+B
+1.13
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int x,y;
+    cin>>x>>y;
+    double tmp;
+    tmp=x*x+y*y;
+    cout<<sqrt(tmp);
+    return 0;
+}
+1.15
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    string f[1007];
+    f[0]='a';
+    f[1]='b';
+    cout<<f[0]<<endl;
+    cout<<f[1]<<endl;
+    for(int i=2;i<11;i++)
+    {
+        f[i]=f[i-1]+f[i-2];
+        cout<<f[i]<<endl;
+    }
+}
+1.17
+#include<iostream>
+using namespace std;
+bool checknhuan(int n)
+{
+    return(n%400==0||(n%100!=0&&n%4==0));
+}
+int main()
+{
+    int n;
+    cin>>n;
+    if(checknhuan(n)) cout<<"nhuan";
+    else cout<<"khong nhuan";
+    return 0;
+}
+1.19
+#include<iostream>
+using namespace std;
+bool b( int x, int y, int z )
+{
+    return( (x>y && y>z) || (x<y && y<z) );
+}
+int main()
+{   int x,y,z;
+    cin>>x>>y>>z;
+    cout<<b(x,y,z);
+    return 0;
+}
+1.20
+#include<iostream>
+using namespace std;
+bool check(int n, int m)
+{
+     return (m%7 == 0 && n%7 == 0)
+}
+int main()
+{
+    int m,n;
+    cin>>m>>n;
+    if(check(m,n)) cout<<"true";
+    else cout<<"false";
+    return 0;
+}
+C
+1.26
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int n;
+	cin>>n;
+	int a[1007];
+	double mean = 0;
+	for(int i=0;i<n;i++)
+	{
+		cin>>a[i];
+		mean += a[i];
+	}
+	sort(a,a+n);
+	cout<<mean/(double)n<<endl
+	    <<a[n-1]<<endl
+		<<a[0]<<endl;
+	return 0;
+}
+1.27
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+	while(cin>>n)
+	{
+		if(n == -1)
+		{
+			cout <<"Bye";
+			break;
+		} 
+		else(n>0 && n%5 == 0) ? cout<<n/5<<endl : cout<<-1<<endl;
+	}
+	return 0;
+}
+1.28
+#include<iostream>
+using namespace std;
+int main()
+{
+    for(int i=1;i<24;i++)
+	{
+		if(i==1) cout<<"12 midnight"<<endl;
+		if(i>=2 && i<=12) cout<<i-1<<"am"<<endl;
+		if(i==13) cout<<"12 noon"<<endl;
+		if(i>=13 && i<24) cout<<i-12<<"pm"<<endl;
+	}
+	return 0;
+}
+
+1.29
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=i;j++) cout<<"*";
+		cout<<endl;
+	}
+	return 0;
+}
+1.30
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=n-i+1;j++) cout<<"*";
+		cout<<endl;
+	}
+	return 0;
+}

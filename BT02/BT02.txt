@@ -1,0 +1,160 @@
+1b
+2d
+3c
+4a
+5d
+6b
+7c
+8e
+9c
+10d
+11c
+12d
+13b
+14a
+15b
+16c
+17c
+18d
+19c
+20b
+C
+1
+#include <iostream>
+
+using namespace std;
+bool check(int n)
+{
+    if(n < 0) return false;
+    if(n == 2) return true;
+    for(int i = 2 ; i < n; i++)
+    {
+        if(n%i == 0) return false;
+    }
+    return true;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    if(check(n)) cout<<"yes";
+    else cout<<"no";
+    return 0;
+}
+2
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i = 1; i <= n; i++)
+    {
+        for(int j = 1; j < i; j++)
+        {
+            cout<<" ";
+        }
+        for(int k = i; k <= n; k++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+3
+#include<iostream>
+using namespace std;
+void printRow(int n)
+{
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=i;j<n;j++)
+        {
+            std::cout<<" ";
+        }
+        for(int k=1;k<i*2;k++)
+        {
+           std::cout<<"*";
+        }
+        for(int m=i;m<n;m++)
+        {
+            std::cout<<" ";
+        }
+        std::cout<<endl;
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    printRow(n);
+    return 0;
+}
+4
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<i;j++)
+        {
+            cout<<" ";
+        }
+        for(int k=2*(n+1-i)-1;k>=1;k--)
+        {
+            cout<<"*";
+        }
+        for(int m=1;m<i;m++)
+        {
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+6
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int n;
+    cin>>n;
+    for(int i = 1; i <= n; i++)
+    {
+        for(int j = i; j <= n ;j++) cout<<j;
+        for(int k =1; k < i; k++) cout<<k;
+        cout<<endl;
+    }
+
+    return 0;
+}
+7
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int tmp = -1;
+    while(cin>>n )
+    {
+        
+        if(n < 0 ) 
+        {
+            cout<<n;
+            break;
+        }
+        if(n == tmp) continue;
+        tmp = n;
+        cout<<n;
+    }
+}
